@@ -1,0 +1,45 @@
+
+@import "tailwindcss";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom styles for 2048 game tiles */
+.bg-tile-2 { @apply bg-orange-100 text-orange-800; }
+.bg-tile-4 { @apply bg-orange-200 text-orange-800; }
+.bg-tile-8 { @apply bg-orange-300 text-orange-800; }
+.bg-tile-16 { @apply bg-orange-400 text-orange-800; }
+.bg-tile-32 { @apply bg-orange-500 text-orange-800; }
+.bg-tile-64 { @apply bg-orange-600 text-white; }
+.bg-tile-128 { @apply bg-orange-700 text-white; }
+.bg-tile-256 { @apply bg-orange-800 text-white; }
+.bg-tile-512 { @apply bg-orange-900 text-white; }
+.bg-tile-1024 { @apply bg-orange-950 text-white; }
+.bg-tile-2048 { @apply bg-yellow-500 text-white; }
